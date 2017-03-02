@@ -1,0 +1,539 @@
+.settings-screen {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+
+//  ------------------------------------------------------------------------
+//  Tabs
+//  ------------------------------------------------------------------------
+
+.settings-screen .tab-container {
+    flex: 0 1 auto;
+    padding: 1.5rem 3rem;
+    background-color: #B3B3B3;
+    border-bottom: 1px solid #999;
+}
+
+.settings-screen .nav-tabs {
+    border-bottom: medium none;
+    margin-bottom: 0;
+}
+
+.settings-screen .nav > li > a {
+    padding: 0.5rem 1.5rem;
+    border: 1px solid #999;
+    border-radius: 0;
+    color: lighten(@black, 30%);
+    margin: 0;
+    background-color: #ccc;
+
+    &:hover,
+    &:active {
+        background-color: #efefef;
+    }
+}
+
+.settings-screen .nav > li + li > a,
+.settings-screen .nav > li + li.active > a {
+    border-left: none;
+}
+
+.settings-screen .nav > li.active {
+    > a {
+        background-color: #fff;
+    }
+
+    > a:hover,
+    > a:active {
+        border-color: darken(@white, 30%);
+        background-color: #fff;
+    }
+}
+
+
+//  ------------------------------------------------------------------------
+//  Content
+//  ------------------------------------------------------------------------
+
+.active-tab-content {
+    flex: 1 1 auto;
+    display: flex;
+    flex-flow: column;
+}
+
+
+//  ------------------------------------------------------------------------
+//  Profiles
+//  ------------------------------------------------------------------------
+
+.profiles-container {
+    padding: 1.5rem 3rem;
+    height: 100%;
+    flex: 1 1 auto;
+    display: flex;
+    flex-flow: column;
+}
+
+.profiles-table {
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    flex: 1 1 auto;
+}
+
+.profiles-table-title {
+    flex: 0 1 auto;
+}
+
+.profiles-table-scroll-wrapper {
+    flex: 1 1 auto;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    background-color: darken(@white, 15%);
+}
+
+.profiles-table-title {
+    .clearfix();
+}
+
+.profiles-table-controls {
+    position: relative;
+    top: -3rem;
+    float: right;
+}
+
+.profiles-table-controls .btn {
+    border-color: darken(@white, 30%);
+}
+
+.profiles-table-controls .btn {
+    float: left;
+    border: 1px solid darken(@white, 35%);
+}
+
+.profiles-table-controls .btn + .btn {
+    margin-left: 0.5rem;
+}
+
+.profiles-table-controls .btn-xs + .btn:not(.btn-xs) {
+    margin-left: 1.5rem;
+}
+
+
+//  ------------------------------------------------------------------------
+//  Filling types
+//  ------------------------------------------------------------------------
+
+.filling_types-container {
+    &:extend(.profiles-container all);
+}
+
+.filling-types-table {
+    &:extend(.profiles-table all);
+}
+
+.filling-types-table-title {
+    &:extend(.profiles-table-title all);
+}
+
+.filling-types-table-scroll-wrapper {
+    &:extend(.profiles-table-scroll-wrapper all);
+}
+
+.filling-types-table-title {
+    &:extend(.profiles-table-title all);
+}
+
+.filling-types-table-controls {
+    &:extend(.profiles-table-controls all);
+}
+
+.filling-types-table-controls .btn {
+    &:extend(.profiles-table-controls .btn all);
+}
+
+
+//  ------------------------------------------------------------------------
+//  Pricing Grids
+//  ------------------------------------------------------------------------
+
+.pricing_grids-container {
+    &:extend(.profiles-container all);
+}
+
+.pricing-grids-table {
+    &:extend(.profiles-table all);
+}
+
+.pricing-grids-table-title {
+    &:extend(.profiles-table-title all);
+}
+
+.pricing-grids-table-scroll-wrapper {
+    &:extend(.profiles-table-scroll-wrapper all);
+}
+
+.pricing-grids-table-title {
+    &:extend(.profiles-table-title all);
+}
+
+.pricing-grids-table-controls {
+    &:extend(.profiles-table-controls all);
+}
+
+.pricing-grids-table-controls .btn {
+    &:extend(.profiles-table-controls .btn all);
+}
+
+.profile-selector-container {
+    float: right;
+}
+
+.profile-selector-container .dropdown-menu {
+    left: auto;
+    right: 0;
+}
+
+.profile-selector-container .btn {
+    border: 1px solid darken(@white, 30%);
+}
+
+.no-current-profile-message {
+    position: absolute;
+    font-size: 1.2em;
+    text-align: center;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    transform: translateY(-50%);
+}
+
+.pricing-grids-table-title .tab-container {
+    flex: none;
+    padding: 2rem 0 1rem;
+    background-color: transparent;
+    border: none;
+}
+
+.pricing-grids-table-title .nav > li > a {
+    border-color: darken(@white, 30%);
+}
+
+
+//  ------------------------------------------------------------------------
+//  Options
+//  ------------------------------------------------------------------------
+
+.options-container {
+    &:extend(.profiles-container all);
+    padding: 0;
+}
+
+.options-main-container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    flex: 1 1 auto;
+    overflow: auto;
+}
+
+.options-dictionary-list-panel {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 300px;
+    bottom: 0;
+    padding: 1.5rem 3rem;
+    background-color: darken(@white, 15%);
+    border-right: 1px solid darken(@white, 30%);
+    overflow: auto;
+}
+
+.options-dictionary-list-panel h2 {
+    margin-bottom: 3rem;
+}
+
+.add-new-dictionary {
+    background-color: darken(@white, 5%);
+    border-color: darken(@white, 30%);
+
+    &:hover {
+        background-color: @white;
+    }
+}
+
+.options-list-container {
+    margin-left: -3rem;
+    margin-right: -3rem;
+    margin-top: 4rem;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.options-list-item {
+    border-bottom: 1px solid darken(@white, 25%);
+
+    &:first-child {
+        border-top: 1px solid darken(@white, 25%);
+    }
+}
+
+.options-list-item.sortable-ghost {
+    opacity: 0.3;
+}
+
+.options-list-item a {
+    display: block;
+    padding: 0.8rem 3rem;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+    cursor: move;
+    cursor: -webkit-grabbing;
+
+    &:hover {
+        background-color: darken(@white, 20%);
+    }
+}
+
+.options-list-container + p {
+    margin-top: 4rem;
+    color: lighten(@black, 40%)
+}
+
+.options-list-item a.is-active {
+    background-color: darken(@white, 25%);
+    color: @black;
+
+    span {
+        position: relative;
+        top: 0.4em;
+        float: right;
+        color: lighten(@black, 35%);
+        font-size: 0.8em;
+    }
+}
+
+.options-list-item a.is-placeholder {
+    color: lighten(@black, 45%);
+}
+
+.options-dictionary {
+    padding: 1em 2em 1em 330px;
+}
+
+.options-dictionary .dictionary-inputs-container {
+    .clearfix();
+}
+
+.dictionary-name .input-container {
+    max-width: 300px;
+    margin-top: 2rem;
+    font-size: 1.1em;
+}
+
+.options-dictionary .dictionary-restrictions {
+    margin-top: 4rem;
+}
+
+.dictionary-restrictions .select-container {
+    margin-top: 2rem;
+    max-width: 300px;
+}
+
+.dictionary-restrictions .select-container .btn {
+    border: 1px solid darken(@white, 20%);
+    background-color: darken(@white, 10%);
+    transition:
+        background-color 200ms cubic-bezier(0.23, 1, 0.32, 1) 0ms,
+        border-color 200ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+
+    &:hover,
+    &:active {
+        background-color: @white;
+    }
+}
+
+.dictionary-actions {
+    position: absolute;
+    top: 3.5rem;
+    right: 3rem;
+
+    button {
+        border-color: lighten(@black, 60%);
+    }
+
+    button + button {
+        margin-left: 1rem;
+    }
+}
+
+
+//  Entries (variants) table
+
+.entry-table-container {
+    margin-top: 5rem;
+}
+
+.options-dictionary-entries-table {
+    position: relative;
+}
+
+.options-dictionary-entries-table > h3 {
+    margin-bottom: 3rem;
+}
+
+.options-dictionary-entries-table .table-actions {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    button {
+        display: block;
+        float: left;
+        border-color: lighten(@black, 60%);
+    }
+
+    .btn + .btn {
+        margin-left: 0.5rem;
+    }
+
+    .btn-xs + .btn:not(.btn-xs) {
+        margin-left: 1.5rem;
+    }
+}
+
+.options-dictionary-entries-table table {
+    width: 100%;
+    table-layout: fixed;
+}
+
+.options-dictionary-entries-table table p {
+    display: inline-block;
+    margin: 0;
+    vertical-align: middle;
+}
+
+.options-dictionary-entries-table table button {
+    float: right;
+}
+
+.options-dictionary-entries-table thead tr {
+    border-top: 1px solid darken(@white, 30%);
+    border-bottom: 1px solid darken(@white, 30%);
+}
+
+.options-dictionary-entries-table tbody tr {
+    border-top: 1px solid darken(@white, 20%);
+    border-bottom: 1px solid darken(@white, 20%);
+}
+
+.options-dictionary-entries-table th {
+    padding: 0.5rem;
+}
+
+.options-dictionary-entries-table td {
+    padding: 0 0.5rem;
+    vertical-align: middle;
+}
+
+.options-dictionary-entries-table th.entry-name {
+    width: 50%;
+}
+
+.options-dictionary-entries-table td.entry-name {
+    padding: 0;
+    width: 50%;
+}
+
+.options-dictionary-entries-table th.entry-profiles,
+.options-dictionary-entries-table td.entry-profiles {
+    width: 35%;
+
+    button {
+        opacity: 0;
+    }
+}
+
+.options-dictionary-entries-table .entry-profiles button {
+    max-width: 25%;
+    float: right;
+}
+
+.options-dictionary-entries-table .entry-profiles p {
+    .text-overflow();
+    max-width: 75%;
+}
+
+.options-dictionary-entries-table th.entry-clone,
+.options-dictionary-entries-table td.entry-clone {
+    width: 5%;
+    opacity: 0;
+}
+
+.options-dictionary-entries-table th.entry-remove,
+.options-dictionary-entries-table td.entry-remove {
+    width: 5%;
+    opacity: 0;
+}
+
+.options-dictionary-entries-table td.entry-drag {
+    opacity: 0;
+    border-color: transparent;
+    border-right-color: darken(@white, 30%);
+    padding: 0;
+    text-align: center;
+    color: darken(@white, 55%);
+    cursor: move;
+    cursor: -webkit-grabbing;
+    font-size: 1.1em;
+    width: 5%;
+}
+
+.options-dictionary-entries-table tr:hover {
+    td.entry-drag {
+        background-color: darken(@white, 15%);
+        opacity: 1;
+    }
+
+    td.entry-clone,
+    td.entry-remove,
+    td.entry-profiles button {
+        opacity: 1;
+    }
+}
+
+//  Don't show some buttons for new entries
+.options-dictionary-entries-table tr.is-new {
+    &:hover {
+        td.entry-clone,
+        td.entry-profiles button {
+            opacity: 0;
+        }
+    }
+}
+
+.options-dictionary-entries-table tr.sortable-ghost {
+    opacity: 0.3;
+}
+
+.options-dictionary-entries-table .input-container .value,
+.options-dictionary-entries-table .input-container input {
+    border-color: transparent;
+}
+
+.options-dictionary-entries-table table + p {
+    margin-top: 3rem;
+    margin-left: 6%;
+    color: lighten(@black, 45%);
+}
+
+.options-dictionary-entries-table .no-entries-message {
+    padding: 1.5rem 5%;
+}

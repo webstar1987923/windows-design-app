@@ -1,0 +1,34 @@
+{{#if heading }}<h3 class="extras-heading{{#unless items_count }} hidden{{/unless}}">{{ heading }}</h3>{{/if}}
+
+{{#if is_optional }}<h4 class="optional-extras-subheading{{#unless items_count }} hidden{{/unless}}">Not inlcuded in total</h4>{{/if}}
+
+<table class="quote-extras-table {{#unless items_count }} hidden{{/unless}}">
+    <thead>
+        <tr>
+            <th class="ref">Ref.</th>
+            <th class="extras-product-description">Product Description</th>
+            <th class="quantity">Qty</th>
+            {{#if show_price }}
+            <th class="price">Price</th>
+            {{/if}}
+        </tr>
+    </thead>
+    <tbody class="quote-extras-table-body"></tbody>
+    {{#if show_price }}
+    <tfoot>
+        <tr>
+            <td colspan="{{ price_colspan }}"></td>
+            <td colspan="1">
+                <table class="quote-total-prices">
+                    <tbody>
+                        <tr class="total">
+                            <td><strong>{{#if is_optional}}Total optional{{else}}Total extras{{/if}}{{#if is_price_estimated}} <small>(est.)</small>{{/if}}</strong></td>
+                            <td class="value"><strong>{{ total_prices.total }}</strong></li></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </tfoot>
+    {{/if}}
+</table>

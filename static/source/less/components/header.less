@@ -1,0 +1,267 @@
+//  ------------------------------------------------------------------------
+//  Header
+//  ------------------------------------------------------------------------
+
+.header {
+    .clearfix();
+    position: fixed;
+    z-index: 300;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: @header-height;
+}
+
+.top-bar {
+    height: 100%;
+    border-bottom: 1px solid fadeout(@black, 50%);
+}
+
+.top-bar-container {
+    position: relative;
+    z-index: 200;
+    height: 100%;
+    background-color: lighten(@black, 28%);
+    box-shadow: 0 0 3px 0 fadeout(@black, 50%);
+}
+
+
+//  ------------------------------------------------------------------------
+//  Project selector
+//  ------------------------------------------------------------------------
+
+.project-selector {
+    float: left;
+    padding: 0.75rem 2rem;
+}
+.float-center {
+    float: left;
+    position: relative;
+    right: -50%;
+}
+
+.float-center-child {
+    position: relative;
+    right:50%;
+}
+.project-selector-container {
+    float: left;
+}
+.project-selector h3 {
+    display: inline-block;
+    margin: 0 2rem 0 0;
+    color: darken(@white, 10%);
+    font-size: 1em;
+    vertical-align: middle;
+}
+
+//  ------------------------------------------------------------------------
+//  Create project
+//  ------------------------------------------------------------------------
+
+.create-project-container {
+    float: left;
+    padding: 0.9rem 2rem 0 0;
+    .create-project-button {
+        color: #e6e6e6;
+        cursor: pointer;
+    }
+}
+
+//  ------------------------------------------------------------------------
+//  Project settings
+//  ------------------------------------------------------------------------
+
+.project-settings-toggle-container {
+    margin-top:3px;
+    float: left;
+    height: 100%;
+}
+
+.project-settings-toggle-container button {
+    display: block;
+    height: 100%;
+    width: 5rem;
+    background-color: lighten(@black, 30%);
+    border-radius: 0;
+    border: none;
+    border-right: 1px solid lighten(@black, 25%);
+    border-left: 1px solid lighten(@black, 25%);
+    color: darken(@white, 25%);
+
+    &:focus {
+        color: darken(@white, 25%);
+        outline: none;
+    }
+
+    &:hover,
+    &:active {
+        background-color: lighten(@black, 40%);
+        color: darken(@white, 10%);
+        outline: none;
+    }
+}
+
+.project-settings-panel {
+    position: absolute;
+    left: 0;
+    top: -100%;
+    z-index: 100;
+    width: 100%;
+    padding: 0.8rem 2rem;
+    border: 1px solid darken(@white, 65%);
+    background-color: darken(@white, 60%);
+    color: darken(@white, 5%);
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);
+    text-align: center;
+    transition: top 0.1s ease-out 0s;
+}
+
+.is-project-settings-panel-open .project-settings-panel {
+    top: 100%;
+}
+
+.project-settings-panel p {
+    margin-bottom: 0;
+}
+
+.project-settings-panel ul {
+    display: inline-block;
+    list-style-type: none;
+    margin-bottom: 0;
+}
+
+.project-settings-panel li {
+    display: inline-block;
+}
+
+.project-settings-panel li + li {
+    margin-left: 2rem;
+    padding-left: 2rem;
+    border-left: 1px solid darken(@white, 50%);
+}
+
+.project-settings-panel li h6 {
+    margin-top: 0;
+}
+
+//  ------------------------------------------------------------------------
+//  comments
+//  ------------------------------------------------------------------------
+.comments-panel {
+    position: absolute;
+    right: 0;
+    top: -2000%;
+    z-index: 150;
+    width: 320px;
+    padding: 0.8rem;
+    border: 1px solid darken(@white, 65%);
+    background-color: darken(@white, 60%);
+    color: darken(@white, 5%);
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);    
+    transition: top 0.1s ease-out 0s;
+}
+
+.is-comments-panel-open .comments-panel {
+    top: 100%;
+    opacity:0.9;
+}
+
+.comments-container {
+    
+    .row {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin: 5px 0px;
+        padding: 10px 9px;
+        width: 96%;
+
+        .comment-date {
+            float:right;
+        }
+    }
+
+    .row:hover {
+        border: 2px solid white;
+        opacity:0.6;
+    }
+
+    .content {
+        height: 400px;
+        overflow-y: scroll;
+    }
+
+    .comment-content {
+        word-wrap: break-word;
+    }
+
+    .add-comment-button {
+        color: white;
+        text-decoration: none;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    .green {
+        background: green;
+        cursor:pointer;
+    }
+
+    .red {
+        background: red;
+        cursor:pointer;
+    }
+
+}
+
+//  ------------------------------------------------------------------------
+//  Spinner
+//  ------------------------------------------------------------------------
+
+.spinner-container {
+    top: 19px;
+    position: relative;
+    float: left;
+    height: 100%;
+    width: 5rem;
+}
+
+
+
+// -------------------------------------------------------------------------
+// Add Comment
+// -------------------------------------------------------------------------
+.add-comment-container, .enable-comment-container {
+    float: right;
+    padding: 0.9rem 2rem 0 0;
+    margin-left: 18px;
+
+    a {
+        color: #e6e6e6;
+        text-decoration: none;
+        cursor: pointer;
+    }
+}
+
+//  ------------------------------------------------------------------------
+//  Status panel
+//  ------------------------------------------------------------------------
+
+.status-panel {
+    float: right;
+    padding: 0.9rem 3rem;
+    color: darken(@white, 10%);
+}
+
+.status-panel p,
+.status-panel ul {
+    display: inline-block;
+}
+
+.status-panel ul {
+    list-style-type: none;
+}
+
+.status-panel a {
+    color: inherit;
+}
