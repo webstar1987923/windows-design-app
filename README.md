@@ -4,4 +4,4 @@ Backbone Marionette,
 Fabric.js,
 Konva.js
 
-Backend - Node.js
+Backend - symfony
